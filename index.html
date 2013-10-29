@@ -1,0 +1,27 @@
+<html>
+<head>
+	<script src="/jscript/jquery.js"></script>
+	<script src="get/yt-getter.js"></script>
+	<script>
+		function playVideo(){
+			var params = '';
+			if($('#autoplay').is(':checked') == true){
+				var params = params.concat(',autoplay=1');
+			}
+			if($('#controls').is(':checked') == true){
+				var params = params.concat(',controls=0');
+			}
+			var embedCode = youpass.get($('#url').val(),params);
+			$('#videoPlayer').html(embedCode);
+		}
+	</script>
+</head>
+<body bgcolor="LightGray">
+	YouTube URL: <input id="url"></input><br/>
+	autoplay: <input id="autoplay" type="checkbox"></input><br/>
+	no controls: <input id="controls" type="checkbox"></input><br/>
+	<button onclick="playVideo()">play video</button>
+	<div id="videoPlayer">
+	</div>
+</body>
+</html>
