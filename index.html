@@ -12,6 +12,8 @@
 				var params = params.concat(',controls=0');
 			}
 			var embedCode = youpass.get($('#url').val(),params);
+			var videoId = youpass.strip_id($('#url').val());
+			$('#videoId').text(videoId);
 			$('#videoPlayer').html(embedCode);
 		}
 	</script>
@@ -23,5 +25,6 @@
 	<button onclick="playVideo()">play video</button>
 	<div id="videoPlayer">
 	</div>
+	Video id: <span id="videoId"></span>
 </body>
 </html>

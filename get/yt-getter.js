@@ -13,3 +13,15 @@ youpass.get = function(url, params){
 		return c;
 	}
 }
+
+youpass.strip_id = function(url){
+	if(url.indexOf("youtube.com") == -1){
+		return 'Invalid YouTube URL.';
+	}else{
+		var a = url.replace("http://www.youtube.com/watch?v=","");
+		var b = a.replace("youtube","");
+		var c = b.replace("https","");
+		var d = c.replace("watch?v=","");
+		return d;
+	}
+}
