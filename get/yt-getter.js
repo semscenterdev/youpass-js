@@ -14,6 +14,7 @@ youpass.get = function(url, params){
 	}
 }
 
+// very glitchy, if you have access to php, use that instead.
 youpass.strip_id = function(url){
 	if(url.indexOf("youtube.com") == -1){
 		return 'Invalid YouTube URL.';
