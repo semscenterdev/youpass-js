@@ -20,9 +20,10 @@ youpass.strip_id = function(url){
 		return 'Invalid YouTube URL.';
 	}else{
 		var a = url.replace("http://www.youtube.com/watch?v=","");
-		var b = a.replace("youtube","");
-		var c = b.replace("https","");
-		var d = c.replace("watch?v=","");
-		return d;
+		var b = url.replace("https://www.youtube.com/watch?v=","");
+		var c = a.replace("youtube","");
+		var d = b.replace("https","");
+		var e = c.replace("watch?v=","");
+		return e;
 	}
 }
